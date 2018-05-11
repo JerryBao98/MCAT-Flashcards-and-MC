@@ -13,12 +13,42 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src = "main.js"></script>
 
+<style>
+div.relative {
+    position: relative;
+    border: 3px solid #73AD21;
+    width: 400px;
+}
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+</style>
+
 </head>
 <body>
 
-<h1> Welcome to the 2017 MCAT Kaplan Flashcard App</h1>
-<h2> Questions are taken from their books</h2>
-<h3> This version will focus only on Biology topics</h3>
+<div class="relative"> Welcome to the 2017 MCAT Kaplan Flashcard App</div>
+
+<form id = 'quiz' name="quiz">
+<p></br>
+
+<p>1.  Combination of partialy digested food and acids that form in the stomach</p>
+<input id ="textbox" type="text" name="q1" >
+
+<p>2.  The most frequently occurring value in a set of observations</p>
+<input type="radio" id = "mc" name = "q2" value = "Mean">Mean<br>   
+<input type="radio" id = "mc" name = "q2" value = "Median">Median<br>   
+<input type="radio" id = "mc" name = "q2" value = "Mean">Mode<br>   
+
+
+</form>
+
+
+
 
 </body>
 </html>
