@@ -10,8 +10,28 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <style type="text/css">
-    .flip3D{width:240px; height: 200px; margin: 10px; float: left;}
+    img {
+        display: block;
+        width: auto;
+        max-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flip3D{
+        width:240px; 
+        height: 200px; 
+        margin: 10px; 
+        float: left;
+    }
+    .center {
+        text-align: center;
+        border: 5px cyan;
+    }
     .flip3D>.front {
+        text-align: center;
+        vertical-align: middle;
+        border-style: solid;
+        line-height: 200px;
         position: absolute;
         transform:perspective(600px) rotateY(0deg);
         background: orange; width:240px; height: 200px; border-radius: 7px;
@@ -19,6 +39,8 @@
         transition: transform .35s linear 0s;
     }
     .flip3D>.back {
+        text-align: center;
+        border-style: solid;
         position: absolute;
         transform:perspective(600px) rotateY(180deg);
         background: cyan; width:240px; height: 200px; border-radius: 7px;
@@ -37,8 +59,12 @@
 <body>
 
     <div class="flip3D">
-        <div class="back"> Box 1 - Back</div>
-        <div class="front"> Box 1 - Front</div>
+        <div class="back"> Pectoral Girdles, Left and Right Clavicle,
+             Limbs, and the Pelvis
+             <img src= "https://upload.wikimedia.org/wikipedia/commons/2/29/Appendicular_skeleton_-_animation.gif" 
+             alt="Appendicular skeleton" height=120px>
+            </div>
+        <div class="front"> Appendicular Skeleton</div>
     </div>
 
     <div class="flip3D">
