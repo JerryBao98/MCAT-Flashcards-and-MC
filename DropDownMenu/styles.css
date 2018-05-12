@@ -1,7 +1,7 @@
 body{
-    padding:30px;
+    padding: 20px;
     margin: 0;
-    border-radius: 45px;
+    border-radius: 15px;
     overflow-y: scroll;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px
@@ -31,9 +31,9 @@ body{
 }
 
 #nav ul li:hover{
-    background-color: #333;
+    background-color:rgb(5, 255, 5);
     padding: 40px;
-    border-radius: 25px;
+    border-radius:5px 60px 20px;
 }
 
 #nav ul li a:visited{
