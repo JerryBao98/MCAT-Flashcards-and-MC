@@ -35,6 +35,13 @@ body{
     border-radius:5px 50px 20px;
 }
 
+#nav ul li img{
+    vertical-align: middle;
+    padding-left: 5px;
+    width: 15px;
+    height: 15px;
+}
+
 #nav ul li a,visited{
     color:black;
     display: block;
@@ -56,11 +63,13 @@ body{
 #nav ul ul{
     display: none;
     position: absolute;
-    border: 5px solid greenyellow;
+    border: 6px solid greenyellow;
+    padding-top: 33px;
+    padding-bottom: 13px;
     border-top: 0px;
-    border-left: 10px;
-    border-right: 10px;
-    padding-top: 20px
+    font-size: 15px;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 #nav ul ul li{
@@ -73,4 +82,6 @@ body{
 
 #nav ul ul li a:hover{
     color: red;
+    display: block;
+    border-radius: 10px
 }
