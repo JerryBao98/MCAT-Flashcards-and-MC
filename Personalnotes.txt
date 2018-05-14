@@ -1,3 +1,8 @@
 Add js by linking an external js file in the head or body. 
 
-link css with the link tag, js with the script tag
+link css with the link tag, js with the script tag.
+
+Javascript as front end language, html and css as design for the website, 
+Use Vue.js as the framework
+
+For the backend. Asp.net core and Nodejs API
