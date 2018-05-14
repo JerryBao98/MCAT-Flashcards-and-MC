@@ -1,0 +1,1 @@
+Add js by linking an external js file in the head or body. 
