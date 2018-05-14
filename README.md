@@ -9,4 +9,4 @@ https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat
 
 The only subject covered will be physiology and other minor parts of general biology. 
 I will experiment other subjects with new implementations
-
+Therefore, the other subjects present on the main menu will not have corresponding links
