@@ -1,1 +1,3 @@
 Add js by linking an external js file in the head or body. 
+
+link css with the link tag, js with the script tag

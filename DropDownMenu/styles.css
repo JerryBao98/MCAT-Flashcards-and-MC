@@ -1,7 +1,6 @@
 body{
-    padding: 20px;
+    padding: 25px;
     margin: 0;
-    border-radius: 15px;
     overflow-y: scroll;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px
@@ -27,17 +26,51 @@ body{
 
 #nav ul li{
     display: inline-block;
-    padding: 40px
+    padding: 20px
 }
 
 #nav ul li:hover{
     background-color:rgb(5, 255, 5);
-    padding: 40px;
-    border-radius:5px 60px 20px;
+    padding: 20px;
+    border-radius:5px 50px 20px;
 }
 
-#nav ul li a:visited{
-    color: green;
+#nav ul li a,visited{
+    color:black;
     display: block;
-    padding: 40px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#nav ul li a:hover{
+    color:black;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#nav ul li:hover ul{
+    display:block;
+}
+
+#nav ul ul{
+    display: none;
+    position: absolute;
+    border: 5px solid greenyellow;
+    border-top: 0px;
+    border-left: 10px;
+    border-right: 10px;
+    padding-top: 20px
+}
+
+#nav ul ul li{
+    display: block
+}
+
+#nav ul ul li a,visited{
+    color: black;
+}
+
+#nav ul ul li a:hover{
+    color: red;
 }
