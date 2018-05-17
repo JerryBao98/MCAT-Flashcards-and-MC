@@ -8,6 +8,16 @@
     <title>Course App</title>
     <link href="./css/Bootstrap_css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+
+        /* v cloak is the form of the html before it is fully loaded */
+    [v-cloak]{
+        display: none;
+        background-color: blue;
+    }
+    
+    </style>
+
 </head>
 <body>
     <div class="jumbotron">
@@ -17,6 +27,13 @@
             <h1 v-html="intro"></h1>
             <h1 v-show="viewed">You have viewed this page</h1>
             <h1 v-if="viewed && viewed2">You have viewed this page</h1>
+            <h1 v-else="viewed && viewed2">You have not viewed this page</h1>
+            <h1 v-pre>{{message}}</h1>
+            <!-- v once will only render the inside once -->
+            <h1 v-once>{{message}}</h1>
+            <h1 v-once>{{message}}</h1>
+            <h1 v-once>{{message}}</h1>
+            <h1 v-cloak>{{message}}</h1>
         </div>
 
         <div id="app">
