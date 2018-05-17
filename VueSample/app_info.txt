@@ -1,0 +1,3 @@
+Simple example of an app built using vue js, link to tutorial found here:https://www.youtube.com/watch?v=78tNYZUS-ps
+
+I would like to make this into an app that keeps track of necessary topics mastered by the user, something like that. 
