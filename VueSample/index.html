@@ -10,22 +10,36 @@
 
 </head>
 <body>
+    <div class="jumbotron">
+    
+        <div id="app">
+            <h1 v-text="message"></h1>
+            <h1 v-html="intro"></h1>
+            <h1 v-show="viewed">You have viewed this page</h1>
+            <h1 v-if="viewed && viewed2">You have viewed this page</h1>
+        </div>
 
-    <div id="app">
-        {{message}}
+        <div id="app">
+            <h1>{{message}}</h1>
+        </div>
+
     </div>
     
     <script>
-        new Vue({
+        var app = new Vue({
             el:'#app',
             data:{
-                message:"Hello Using Vue.js"
+                message:"Hello Using Vue.js",
+                lmao: "OK",
+                viewed: false,
+                viewed2: true,
+                intro:"Welcome to the program, <small>it is all about Vue.js </small>",
             }
         });
     </script>
 
+</body>
     <script src="./js/Bootstrap_js/jquery-3.3.1.min.js"></script>
     <script src="./js/Bootstrap_js/bootstrap.min.js"></script>
-
-</body>
 </html>
+
