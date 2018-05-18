@@ -31,8 +31,6 @@
             <h1 v-pre>{{message}}</h1>
             <!-- v once will only render the inside once -->
             <h1 v-once>{{message}}</h1>
-            <h1 v-once>{{message}}</h1>
-            <h1 v-once>{{message}}</h1>
             <h1 v-cloak>{{message}}</h1>
         </div>
 
@@ -41,7 +39,9 @@
         </div>
 
         <div id="ap">
-            <a v-bind:title= "lmao">Testing the bind directive</a>
+            <a :title= "lmao">Testing the bind directive</a>
+            <p></p>
+            <img :src="url" :alt = "title" :title="title"/>
         </div>
 
     </div>
@@ -57,10 +57,11 @@
                 intro:"Welcome to the program, <small>it is all about Vue.js </small>",
             }
         });
-        var app = new Vue({
+        var app2 = new Vue({
             el:'#ap',
             data:{
-                lmao: "OK"
+                lmao: "Todays's Date: " + new Date(),
+                url:"http://i0.kym-cdn.com/photos/images/original/001/009/269/1db.png"
             }
         });
     </script>
