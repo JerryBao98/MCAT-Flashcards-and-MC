@@ -55,8 +55,11 @@
 
         <div id="app3">
             <!-- Here there will be a mouse click event to occur -->
-            <button v-on:click="clicked">Click Here</button>
-            <button v-on:click="clicked($event)">Click Here</button>
+            <button v-on:click.once="clicked">This button can only be pressed once</button>
+            <button v-on:click="clicked('Hello Im using an alert', $event)">Click Here</button>
+            <a href="https://www.google.ca" v-on:click = "showDialog" target="_blank"> 
+                This will create a new tab
+            </a>
         </div>
 
 
@@ -104,10 +107,10 @@
         var app3 = new Vue({
             el: '#app3',
             methods: {
-                clicked:function (event){
+                clicked:function (message, event){
                     //Will show a mouse click event object
                     console.log(event);
-                    alert("Button has been pressed");
+                    alert(message);
                 }
             }
 
