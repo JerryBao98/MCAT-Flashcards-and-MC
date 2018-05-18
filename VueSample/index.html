@@ -39,9 +39,12 @@
         </div>
 
         <div id="ap">
-            <a :title= "lmao">Testing the bind directive</a>
-            <p></p>
+            <a :title= "lmao">Testing the bind directive</a><p></p>
             <img :src="url" :alt = "title" :title="title"/>
+            <p>{{age > 60 ? 'Age is greater than 60': 'Age is less than 60'}}</p>
+            <p>{{name.split(' ')[1]}}</p>
+            <p>{{getFullName()}}</p>
+            <p>{{addStrings("Hey", "Beter")}}</p>
         </div>
 
     </div>
@@ -60,8 +63,28 @@
         var app2 = new Vue({
             el:'#ap',
             data:{
-                lmao: "Todays's Date: " + new Date(),
+                lmao: "Todays's Date: " + new Date(),  
+                name: 'Jerry Bao',
+                firstname: 'Jerry',
+                lastname:'Bao',
+                age: 67, 
                 url:"http://i0.kym-cdn.com/photos/images/original/001/009/269/1db.png"
+            },
+            methods:{
+                getFullName: function(){
+                    var fullName = this.firstname + ' ' + this.lastname;
+                    return fullName
+                },
+                addStrings: function(first, second){
+                    var ayy = first + ' ' + second;
+                    return ayy
+                },
+                
+                returnObject: function(g){
+                    return{
+                        name: g
+                    }
+                }
             }
         });
     </script>
