@@ -49,6 +49,7 @@
             <p>{{returnObject("L")}}</p>
 
             <p>{{returnObject("L").name}}</p>
+            <a v-bind:href="amazonUrl">Click here to go to Amazon</a>
         </div>
 
     </div>
@@ -72,7 +73,8 @@
                 firstname: 'Jerry',
                 lastname:'Bao',
                 age: 67, 
-                url:"http://i0.kym-cdn.com/photos/images/original/001/009/269/1db.png"
+                url:"http://i0.kym-cdn.com/photos/images/original/001/009/269/1db.png",
+                amazonUrl: 'https://www.amazon.ca/'
             },
             methods:{
                 getFullName: function(){
