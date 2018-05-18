@@ -40,6 +40,10 @@
             <h1>{{message}}</h1>
         </div>
 
+        <div id="ap">
+            <a v-bind:title= "lmao">Testing the bind directive</a>
+        </div>
+
     </div>
     
     <script>
@@ -51,6 +55,12 @@
                 viewed: false,
                 viewed2: true,
                 intro:"Welcome to the program, <small>it is all about Vue.js </small>",
+            }
+        });
+        var app = new Vue({
+            el:'#ap',
+            data:{
+                lmao: "OK"
             }
         });
     </script>
