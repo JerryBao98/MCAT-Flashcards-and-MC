@@ -38,7 +38,7 @@
             <h1>{{message}}</h1>
         </div>
 
-        <div id="ap">
+        <div id="app2">
             <a :title= "lmao">Testing the bind directive</a><p></p>
             <img :src="url" :alt = "title" :title="title"/>
             <p>{{age > 60 ? 'Age is greater than 60': 'Age is less than 60'}}</p>
@@ -49,8 +49,16 @@
             <p>{{returnObject("L")}}</p>
 
             <p>{{returnObject("L").name}}</p>
+            <!-- Here th ehref is an argument to the v bind directive -->
             <a v-bind:href="amazonUrl">Click here to go to Amazon</a>
         </div>
+
+        <div id="app3">
+            <!-- Here there will be a mouse click event to occur -->
+            <button v-on:click="clicked">Click Here</button>
+            <button v-on:click="clicked($event)">Click Here</button>
+        </div>
+
 
     </div>
     
@@ -66,7 +74,7 @@
             }
         });
         var app2 = new Vue({
-            el:'#ap',
+            el:'#app2',
             data:{
                 lmao: "Todays's Date: " + new Date(),  
                 name: 'Jerry Bao',
@@ -93,6 +101,19 @@
                 }
             }
         });
+        var app3 = new Vue({
+            el: '#app3',
+            methods: {
+                clicked:function (event){
+                    //Will show a mouse click event object
+                    console.log(event);
+                    alert("Button has been pressed");
+                }
+            }
+
+        });
+
+        
     </script>
 
 </body>
