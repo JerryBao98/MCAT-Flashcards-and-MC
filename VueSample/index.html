@@ -45,6 +45,10 @@
             <p>{{name.split(' ')[1]}}</p>
             <p>{{getFullName()}}</p>
             <p>{{addStrings("Hey", "Beter")}}</p>
+            <!-- This implementation will print out the object, not the property -->
+            <p>{{returnObject("L")}}</p>
+
+            <p>{{returnObject("L").name}}</p>
         </div>
 
     </div>
@@ -79,7 +83,7 @@
                     var ayy = first + ' ' + second;
                     return ayy
                 },
-                
+                // returns an object of type name
                 returnObject: function(g){
                     return{
                         name: g
