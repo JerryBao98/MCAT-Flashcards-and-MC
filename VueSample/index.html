@@ -49,7 +49,7 @@
             <p>{{returnObject("L")}}</p>
 
             <p>{{returnObject("L").name}}</p>
-            <!-- Here th ehref is an argument to the v bind directive -->
+            <!-- Here the href is an argument to the v bind directive -->
             <a v-bind:href="amazonUrl">Click here to go to Amazon</a>
         </div>
 
@@ -60,6 +60,7 @@
             <a href="https://www.google.ca" v-on:click = "showDialog" target="_blank"> 
                 This will create a new tab
             </a>
+            <input type="text" v-on:keyup.enter.space="pressedEnter">Press the enter or space
         </div>
 
 
@@ -111,6 +112,9 @@
                     //Will show a mouse click event object
                     console.log(event);
                     alert(message);
+                },
+                pressedEnter: function(){
+                    alert("Form submitted");
                 }
             }
 
