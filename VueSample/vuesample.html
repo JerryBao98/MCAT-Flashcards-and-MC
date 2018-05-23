@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src = "./js/vue.js"></script>
+    <title>Course App</title>
+    <link href="./css/Bootstrap_css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        /* v cloak is the form of the html before it is fully loaded */
+    [v-cloak]{
+        display: none;
+        background-color: blue;
+    }
+    
+    </style>
+
+</head>
+<body>
+    <div class="jumbotron">
+    
+        <div id="app">
+            <h1 v-text="message"></h1>
+            <h1 v-html="intro"></h1>
+            <h1 v-show="viewed">You have viewed this page</h1>
+            <h1 v-if="viewed && viewed2">You have viewed this page</h1>
+            <h1 v-else="viewed && viewed2">You have not viewed this page</h1>
+            <h1 v-pre>{{message}}</h1>
+            <!-- v once will only render the inside once -->
+            <h1 v-once>{{message}}</h1>
+            <h1 v-cloak>{{message}}</h1>
+        </div>
+
+        <div id="app">
+            <h1>{{message}}</h1>
+        </div>
+
+        <div id="app2">
+            <a :title= "lmao">Testing the bind directive</a><p></p>
+            <img :src="url" :alt = "title" :title="title"/>
+            <p>{{age > 60 ? 'Age is greater than 60': 'Age is less than 60'}}</p>
+            <p>{{name.split(' ')[1]}}</p>
+            <p>{{getFullName()}}</p>
+            <p>{{addStrings("Hey", "Beter")}}</p>
+            <!-- This implementation will print out the object, not the property -->
+            <p>{{returnObject("L")}}</p>
+
+            <p>{{returnObject("L").name}}</p>
+            <!-- Here the href is an argument to the v bind directive -->
+            <a v-bind:href="amazonUrl">Click here to go to Amazon</a>
+        </div>
+
+        <div id="app3">
+            <!-- Here there will be a mouse click event to occur -->
+            <button v-on:click.once="clicked">This button can only be pressed once</button>
+            <button v-on:click="clicked('Hello Im using an alert', $event)">Click Here</button>
+            <a href="https://www.google.ca" v-on:click = "showDialog" target="_blank"> 
+                This will create a new tab
+            </a>
+            <input type="text" v-on:keyup.enter.space="pressedEnter">Press the enter or space
+        </div>
+
+
+    </div>
+    
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:"Hello Using Vue.js",
+                lmao: "OK",
+                viewed: false,
+                viewed2: true,
+                intro:"Welcome to the program, <small>it is all about Vue.js </small>",
+            }
+        });
+        var app2 = new Vue({
+            el:'#app2',
+            data:{
+                lmao: "Todays's Date: " + new Date(),  
+                name: 'Jerry Bao',
+                firstname: 'Jerry',
+                lastname:'Bao',
+                age: 67, 
+                url:"http://i0.kym-cdn.com/photos/images/original/001/009/269/1db.png",
+                amazonUrl: 'https://www.amazon.ca/'
+            },
+            methods:{
+                getFullName: function(){
+                    var fullName = this.firstname + ' ' + this.lastname;
+                    return fullName
+                },
+                addStrings: function(first, second){
+                    var ayy = first + ' ' + second;
+                    return ayy
+                },
+                // returns an object of type name
+                returnObject: function(g){
+                    return{
+                        name: g
+                    }
+                }
+            }
+        });
+        var app3 = new Vue({
+            el: '#app3',
+            methods: {
+                clicked:function (message, event){
+                    //Will show a mouse click event object
+                    console.log(event);
+                    alert(message);
+                },
+                pressedEnter: function(){
+                    alert("Form submitted");
+                }
+            }
+
+        });
+
+        
+    </script>
+
+</body>
+    <script src="./js/Bootstrap_js/jquery-3.3.1.min.js"></script>
+    <script src="./js/Bootstrap_js/bootstrap.min.js"></script>
+</html>
+
